@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>İletişim - iTurut</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="js/language.js" defer></script>
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="nav-brand">
+      <img src="images/logo.png" alt="iTurut" class="nav-logo">
+      <span class="nav-name">iTurut</span>
+    </div>
+    <div class="nav-right">
+      <select id="languageSelector" onchange="changeLanguage()">
+        <option value="tr">🇹🇷 Türkçe</option>
+        <option value="en">🇬🇧 English</option>
+      </select>
+      <a href="login.html" class="btn-nav">Notlarım →</a>
+    </div>
+  </nav>
+
+  <div style="max-width:560px; margin:6rem auto; padding:0 2rem; text-align:center;">
+    <div style="font-size:2.5rem; margin-bottom:1.5rem;">✉️</div>
+    <h1 style="font-size:2rem; font-weight:800; color:#0f172a; margin-bottom:1rem;">İletişim</h1>
+    <p style="color:#94a3b8; font-size:1.05rem; margin-bottom:2.5rem; line-height:1.7;">
+      Geri bildirim, öneri veya sorularınız için bize ulaşın.<br>En kısa sürede dönüş yaparız.
+    </p>
+    <div style="background:white; border:1px solid #e2e8f0; border-radius:16px; padding:2.5rem; box-shadow:0 4px 24px rgba(0,0,0,0.06);">
+      <a href="mailto:iturutapp@gmail.com" style="display:flex; align-items:center; justify-content:center; gap:10px; font-size:1.1rem; font-weight:600; color:#2563eb; text-decoration:none;">
+        📧 iturutapp@gmail.com
+      </a>
+    </div>
+    <p style="margin-top:2rem;">
+      <a href="index.html" style="color:#94a3b8; font-size:0.9rem; text-decoration:none;">← Ana Sayfaya Dön</a>
+    </p>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <img src="images/logo.png" alt="iTurut" class="footer-logo">
+        <span>iTurut</span>
+      </div>
+      <div class="footer-links">
+        <a href="privacy-policy.html">Gizlilik Politikası</a>
+        <a href="account-deletion.html">Hesap Silme</a>
+        <a href="contact.html">İletişim</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 iTurut. Tüm hakları saklıdır.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
