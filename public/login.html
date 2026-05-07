@@ -5,39 +5,69 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Giriş Yap - iTurut</title>
   <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="js/language.js" defer></script>
 </head>
-<body>
+<body style="min-height:100vh; display:flex; flex-direction:column;">
+
   <nav class="navbar">
-    <div class="nav-left">
+    <div class="nav-brand">
+      <img src="images/logo.png" alt="iTurut" class="nav-logo">
+      <span class="nav-name">iTurut</span>
+    </div>
+    <div class="nav-links">
       <a href="index.html">Anasayfa</a>
       <a href="about.html">Hakkında</a>
       <a href="contact.html">İletişim</a>
     </div>
+    <div class="nav-right">
+      <select id="languageSelector" onchange="changeLanguage()">
+        <option value="tr">🇹🇷 Türkçe</option>
+        <option value="en">🇬🇧 English</option>
+      </select>
+    </div>
   </nav>
 
-  <div class="login-container">
-    <h2>iTurut Notlara Giriş</h2>
-    <form id="loginForm">
-      <input type="email" id="email" placeholder="Email" required>
-      <input type="password" id="password" placeholder="Şifre" required>
-      <button type="submit">Giriş Yap</button>
-    </form>
-    <p id="error-message" style="color:red; margin-top:10px;"></p>
+  <div style="flex:1; display:flex; align-items:center; justify-content:center; padding: 3rem 1rem;">
+    <div class="login-container">
+      <div style="text-align:center; margin-bottom:1.5rem;">
+        <img src="images/logo.png" alt="iTurut" style="width:52px; height:52px; object-fit:contain; margin-bottom:0.75rem;">
+        <h2>iTurut'a Giriş Yap</h2>
+        <p style="color:#94a3b8; font-size:0.9rem; margin-top:0.25rem;">Notlarına devam et</p>
+      </div>
+      <form id="loginForm">
+        <input type="email" id="email" placeholder="Email adresi" required autocomplete="email">
+        <input type="password" id="password" placeholder="Şifre" required autocomplete="current-password">
+        <button type="submit">Giriş Yap</button>
+      </form>
+      <p id="error-message"></p>
+      <p style="text-align:center; margin-top:1.5rem; font-size:0.9rem; color:#94a3b8;">
+        Hesabın yok mu? <a href="login.html#signup" style="color:#2563eb; font-weight:600;">Kayıt Ol</a>
+      </p>
+    </div>
   </div>
 
   <script type="module">
     import { auth, signInWithEmailAndPassword } from './js/firebase.js';
-    
+
     document.getElementById('loginForm').addEventListener('submit', async (e) => {
       e.preventDefault();
-      const email = document.getElementById('email').value;
+      const email    = document.getElementById('email').value;
       const password = document.getElementById('password').value;
-      
+      const errEl    = document.getElementById('error-message');
+      errEl.textContent = '';
+
       try {
         await signInWithEmailAndPassword(auth, email, password);
-        window.location.href = "dashboard.html";
+        window.location.href = 'dashboard.html';
       } catch (error) {
-        document.getElementById('error-message').textContent = "Giriş başarısız: " + error.message;
+        const msgs = {
+          'auth/user-not-found':     'Bu email ile kayıtlı kullanıcı bulunamadı.',
+          'auth/wrong-password':     'Şifre hatalı.',
+          'auth/invalid-credential': 'Email veya şifre hatalı.',
+          'auth/too-many-requests':  'Çok fazla deneme. Lütfen bekleyin.',
+        };
+        errEl.textContent = msgs[error.code] || 'Giriş başarısız: ' + error.message;
       }
     });
   </script>
