@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Giriş Yap - iTurut</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-left">
+      <a href="index.html">Anasayfa</a>
+      <a href="about.html">Hakkında</a>
+      <a href="contact.html">İletişim</a>
+    </div>
+  </nav>
+
+  <div class="login-container">
+    <h2>iTurut Notlara Giriş</h2>
+    <form id="loginForm">
+      <input type="email" id="email" placeholder="Email" required>
+      <input type="password" id="password" placeholder="Şifre" required>
+      <button type="submit">Giriş Yap</button>
+    </form>
+    <p id="error-message" style="color:red; margin-top:10px;"></p>
+  </div>
+
+  <script type="module">
+    import { auth, signInWithEmailAndPassword } from './js/firebase.js';
+    
+    document.getElementById('loginForm').addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const email = document.getElementById('email').value;
+      const password = document.getElementById('password').value;
+      
+      try {
+        await signInWithEmailAndPassword(auth, email, password);
+        window.location.href = "dashboard.html";
+      } catch (error) {
+        document.getElementById('error-message').textContent = "Giriş başarısız: " + error.message;
+      }
+    });
+  </script>
+</body>
+</html>

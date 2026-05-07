@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Not Uygulaması</title>
+    <link rel="stylesheet" href="css/dashboard.css">
+</head>
+<body>
+    <div class="nav-bar">
+        <div>iTurut Notlarım</div>
+        <div>
+            <span id="profileEmail"></span>
+            <span id="logoutBtn">Çıkış Yap</span>
+        </div>
+    </div>
+    
+    <div class="main-container">
+        <div class="categories">
+            <h3>Kategoriler</h3>
+            <select id="categorySelect" class="category-dropdown">
+                <option value="all">Tüm Kategoriler</option>
+            </select>
+            <button id="addCategoryBtn">+ Kategori Ekle</button>
+        </div>
+        
+        <div class="notes-list" id="notesList">
+            <div class="note-item">Yükleniyor...</div>
+        </div>
+        
+        <div class="note-content">
+            <div class="note-editor-container">
+                <div class="note-editor" id="noteEditor" contenteditable="true">
+                    Not seçin veya yeni not oluşturun...
+                </div>
+                <div class="toolbar">
+                    <button id="addNoteBtn">+ Yeni Not</button>
+                    <button id="saveNoteBtn">💾 Kaydet</button>
+                    <button id="deleteNoteBtn">🗑️ Sil</button>
+                    <button class="format-btn" data-format="bold"><b>B</b></button>
+                    <button class="format-btn" data-format="italic"><i>I</i></button>
+                    <button class="format-btn" data-format="underline"><u>U</u></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="js/dashboard.js"></script>
+</body>
+</html>

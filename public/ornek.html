@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Not Uygulaması</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        /* Navigation Bar */
+        .nav-bar {
+            background-color: #333;
+            color: white;
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        /* Main Container */
+        .main-container {
+            display: flex;
+            flex: 1;
+            overflow: hidden;
+        }
+        
+        /* Categories Section */
+        .categories {
+            width: 200px;
+            background-color: #f0f0f0;
+            padding: 15px;
+            border-right: 1px solid #ddd;
+            overflow-y: auto;
+        }
+        
+        .categories h3 {
+            margin-top: 0;
+            color: #555;
+        }
+        
+        .categories ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .categories li {
+            padding: 8px 0;
+            cursor: pointer;
+        }
+        
+        .categories li:hover {
+            background-color: #e0e0e0;
+        }
+        
+        /* Notes List Section - EN GENİŞ BÖLÜM */
+        .notes-list {
+            flex: 1;
+            min-width: 300px;
+            background-color: white;
+            padding: 15px;
+            border-right: 1px solid #ddd;
+            overflow-y: auto;
+        }
+        
+        .note-item {
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #eee;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        
+        .note-item:hover {
+            background-color: #f9f9f9;
+        }
+        
+        /* Note Content Section - YAKLAŞIK %45 GENİŞLİK */
+        .note-content {
+            width: 45%;
+            max-width: 500px;
+            display: flex;
+            flex-direction: column;
+            background-color: white;
+            overflow-y: auto;
+        }
+        
+        .note-editor-container {
+            padding: 20px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            height: 50vh; /* Sayfanın yarısı kadar yükseklik */
+        }
+        
+        .note-editor {
+            flex: 1;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            padding: 15px;
+            margin-bottom: 15px;
+            overflow-y: auto;
+        }
+        
+        /* Toolbar */
+        .toolbar {
+            background-color: #f5f5f5;
+            padding: 10px;
+            border-top: 1px solid #ddd;
+            display: flex;
+            gap: 10px;
+        }
+        
+        .toolbar button {
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            padding: 5px 10px;
+        }
+        
+        .toolbar button:hover {
+            background-color: #e0e0e0;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+    <div class="nav-bar">
+        <div>NAVIGATION BAR</div>
+        <div>
+            <span>Profil</span>
+            <span>logout</span>
+        </div>
+    </div>
+    
+    <div class="main-container">
+        <!-- Kategoriler -->
+        <div class="categories">
+            <h3>Category</h3>
+            <ul>
+                <li>hepsi</li>
+                <li>category 1</li>
+                <li>category 2</li>
+            </ul>
+        </div>
+        
+        <!-- Not Listesi (EN GENİŞ BÖLÜM) -->
+        <div class="notes-list">
+            <div class="note-item">NOTE 1</div>
+            <div class="note-item">NOTE 2</div>
+            <div class="note-item">NOTE 3</div>
+            <div class="note-item">NOTE 4</div>
+            <div class="note-item">NOTE 5</div>
+            <div class="note-item">NOTE 6</div>
+            <div class="note-item">NOTE 7</div>
+        </div>
+        
+        <!-- Not İçeriği (YAKLAŞIK %45 GENİŞLİK) -->
+        <div class="note-content">
+            <div class="note-editor-container">
+                <div class="note-editor" contenteditable="true">
+                    Buraya not içeriği gelecek...<br><br>
+                    Örnek metin: Bu bir test notudur. Bu alanda not içeriğini düzenleyebilirsiniz.
+                </div>
+                <div class="toolbar">
+                    <button>+</button>
+                    <button><b>B</b></button>
+                    <button><i>I</i></button>
+                    <button><u>U</u></button>
+                    <button>ab</button>
+                    <button>💤</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
