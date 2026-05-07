@@ -3,100 +3,189 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>iTurut – Smart Voice Notes</title>
+  <title>iTurut – Smart Voice Note App</title>
   <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <script src="js/language.js" defer></script>
 </head>
 <body>
+
   <!-- NAVIGATION -->
   <nav class="navbar">
-    <div class="nav-left">
+    <div class="nav-brand">
+      <img src="images/logo.png" alt="iTurut" class="nav-logo">
+      <span class="nav-name">iTurut</span>
+    </div>
+    <div class="nav-links">
       <a href="index-en.html">Home</a>
       <a href="about.html">About</a>
       <a href="contact.html">Contact</a>
     </div>
     <div class="nav-right">
       <select id="languageSelector" onchange="changeLanguage()">
-        <option value="en">🇬🇧 English</option>
         <option value="tr">🇹🇷 Türkçe</option>
+        <option value="en" selected>🇬🇧 English</option>
       </select>
-      <a href="login.html">My Notes</a>
+      <a href="login.html" class="btn-nav">My Notes →</a>
     </div>
   </nav>
 
-  <!-- CONTENT -->
-  <main class="main-container">
-    <div class="text-content">
-      <img class="logo" src="images/logo.png" alt="iTurut Logo">
-
-      <h1>iTurut – Smart Voice Note-Taking App</h1>
-      <p class="tagline"><strong>Minimal Touch. Maximum Voice.</strong></p>
-
-      <section>
-        <h2>🚀 What is iTurut?</h2>
-        <p>iTurut is a bilingual, voice-first note-taking app that captures thoughts in real time -- while driving, working, or walking.</p>
-      </section>
-
-      <section>
-        <h2>🧑‍🏫 Why I Built iTurut</h2>
-        <p>As an educator, digital marketer, database admin and poet, I needed a tool that let me capture spontaneous ideas -- especially in Turkish.</p>
-      </section>
-
-      <section>
-        <h2>🧠 The Problem</h2>
-        <ul>
-          <li>Short, clunky recordings</li>
-          <li>English-only limitations</li>
-          <li>No smart command handling</li>
-          <li>No intelligent editing</li>
-        </ul>
-      </section>
-
-      <section>
-        <h2>🤖 The Solution</h2>
-        <ul>
-          <li>One-tap to start</li>
-          <li>3-minute uninterrupted sessions</li>
-          <li>Voice commands: "Stop", "New note", "Edit", "Send"</li>
-          <li>GPT-powered editing</li>
-          <li>Multilingual support (TR + EN)</li>
-        </ul>
-      </section>
-
-      <section>
-        <h2>💸 Business Model</h2>
-        <ul>
-          <li>Free: 2 notes/day</li>
-          <li>7-day trial for full features</li>
-          <li>$20 one-time unlock</li>
-          <li>$2/month for AI extras</li>
-        </ul>
-      </section>
-
-      <section>
-        <h2>📈 Roadmap & Vision</h2>
-        <ul>
-          <li>MVP live by Q3 2025</li>
-          <li>Future: web dashboard, in-car voice UI, smart tags</li>
-        </ul>
-      </section>
-
-      <section>
-        <h2>👤 The Founder</h2>
-        <p>Istikbal Turut – educator, poet, database admin, digital thinker. Building tools that matter in both Turkish and global voice ecosystems.</p>
-      </section>
-
-      <footer class="contact">
-        <p><strong>Contact</strong><br>
-        Istikbal Turut – Toronto<br>
-        <a href="mailto:istikbalturut@gmail.com">istikbalturut@gmail.com</a> |
-        <a href="https://www.linkedin.com/in/istikbalturut/">LinkedIn</a></p>
-      </footer>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-text">
+      <div class="badge">🎙️ Voice-First Note Taking</div>
+      <h1>Capture Your Thoughts<br><span class="highlight">Instantly</span></h1>
+      <p class="hero-sub">AI-powered voice note app with Turkish and English support. Speak, record, edit — all with one tap.</p>
+      <div class="hero-actions">
+        <a href="login.html" class="btn-primary">Get Started Free</a>
+        <a href="#how-it-works" class="btn-secondary">How It Works</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat">
+          <span class="stat-num">3 min</span>
+          <span class="stat-label">Continuous Recording</span>
+        </div>
+        <div class="stat">
+          <span class="stat-num">2 lang</span>
+          <span class="stat-label">TR + EN</span>
+        </div>
+        <div class="stat">
+          <span class="stat-num">AI</span>
+          <span class="stat-label">Powered Editing</span>
+        </div>
+      </div>
     </div>
-
-    <div class="image-content">
-      <img src="images/kiz.png" alt="Hero Image" class="hero-image">
+    <div class="hero-image">
+      <img src="images/kiz.png" alt="iTurut in use">
     </div>
-  </main>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section class="how-it-works" id="how-it-works">
+    <div class="section-inner">
+      <h2 class="section-title">How It Works</h2>
+      <p class="section-sub">Three steps to capture and organize your thoughts</p>
+      <div class="steps">
+        <div class="step">
+          <div class="step-icon">🎙️</div>
+          <h3>Speak</h3>
+          <p>Tap the button and speak in Turkish or English. Real-time transcription works instantly.</p>
+        </div>
+        <div class="step-arrow">→</div>
+        <div class="step">
+          <div class="step-icon">✨</div>
+          <h3>Edit</h3>
+          <p>AI automatically corrects your text, cleans grammar errors and makes your note clearer.</p>
+        </div>
+        <div class="step-arrow">→</div>
+        <div class="step">
+          <div class="step-icon">💾</div>
+          <h3>Save</h3>
+          <p>Save your note, categorize it, share it. Access from any device — web and mobile.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section class="features">
+    <div class="section-inner">
+      <h2 class="section-title">Why iTurut?</h2>
+      <p class="section-sub">What makes it different from other note apps?</p>
+      <div class="feature-grid">
+        <div class="feature-card">
+          <div class="feature-icon">🇹🇷</div>
+          <h3>Turkish First</h3>
+          <p>Most apps only support English. iTurut treats Turkish as a first-class language with full support.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">⚡</div>
+          <h3>One Tap</h3>
+          <p>While driving, walking, or in a meeting — one tap starts recording, your thoughts won't be lost.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🤖</div>
+          <h3>AI Editing</h3>
+          <p>ChatGPT-powered editing turns your spoken text into a professional, polished note.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">☁️</div>
+          <h3>Access Anywhere</h3>
+          <p>iOS app and web dashboard — access your notes from any device, nothing gets lost.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">📂</div>
+          <h3>Smart Organization</h3>
+          <p>Categories and titles help you manage hundreds of notes and find what you need instantly.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🔒</div>
+          <h3>Secure & Private</h3>
+          <p>Your notes are safely stored with Firebase. Only you can access them.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHO IS IT FOR -->
+  <section class="for-who">
+    <div class="section-inner">
+      <h2 class="section-title">Who Uses It?</h2>
+      <div class="persona-grid">
+        <div class="persona">
+          <div class="persona-icon">🧑‍💼</div>
+          <h3>Managers</h3>
+          <p>Meeting notes, action items, idea lists — even when your hands are full.</p>
+        </div>
+        <div class="persona">
+          <div class="persona-icon">🎓</div>
+          <h3>Students</h3>
+          <p>Lecture notes, project ideas, research notes — quickly captured by voice.</p>
+        </div>
+        <div class="persona">
+          <div class="persona-icon">✍️</div>
+          <h3>Content Creators</h3>
+          <p>Blog ideas, video topics, social media content — catch inspiration when it strikes.</p>
+        </div>
+        <div class="persona">
+          <div class="persona-icon">🚗</div>
+          <h3>Commuters</h3>
+          <p>Ideas that come to you on the road no longer get lost. Safe, hands-free recording.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta">
+    <div class="section-inner">
+      <h2>Try It Now</h2>
+      <p>Signing up is free. Take your first note today.</p>
+      <a href="login.html" class="btn-primary btn-large">Start for Free →</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <img src="images/logo.png" alt="iTurut" class="footer-logo">
+        <span>iTurut</span>
+      </div>
+      <div class="footer-links">
+        <a href="privacy-policy.html">Privacy Policy</a>
+        <a href="account-deletion.html">Account Deletion</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="footer-contact">
+        <a href="mailto:istikbalturut@gmail.com">istikbalturut@gmail.com</a>
+        <a href="https://www.linkedin.com/in/istikbalturut/" target="_blank">LinkedIn</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 iTurut. All rights reserved. Toronto, Canada.</p>
+    </div>
+  </footer>
+
 </body>
 </html>

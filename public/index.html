@@ -3,14 +3,20 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>iTurut – Akıllı Ses Notları</title>
+  <title>iTurut – Akıllı Ses Not Uygulaması</title>
   <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <script src="js/language.js" defer></script>
 </head>
 <body>
+
   <!-- NAVIGATION -->
   <nav class="navbar">
-    <div class="nav-left">
+    <div class="nav-brand">
+      <img src="images/logo.png" alt="iTurut" class="nav-logo">
+      <span class="nav-name">iTurut</span>
+    </div>
+    <div class="nav-links">
       <a href="index.html">Anasayfa</a>
       <a href="about.html">Hakkında</a>
       <a href="contact.html">İletişim</a>
@@ -20,83 +26,166 @@
         <option value="tr">🇹🇷 Türkçe</option>
         <option value="en">🇬🇧 English</option>
       </select>
-      <a href="login.html">Notlarım</a>
+      <a href="login.html" class="btn-nav">Notlarım →</a>
     </div>
   </nav>
 
-  <!-- CONTENT -->
-  <main class="main-container">
-    <div class="text-content">
-      <img class="logo" src="images/logo.png" alt="iTurut Logo">
-
-      <h1>iTurut – Akıllı Ses Not Uygulaması</h1>
-      <p class="tagline"><strong>Minimal Dokunuş. Maksimum Ses.</strong></p>
-
-      <section>
-        <h2>🚀 iTurut Nedir?</h2>
-        <p>iTurut, gerçek zamanlı olarak düşüncelerinizi kaydeden çift dilli, ses öncelikli bir not alma uygulamasıdır - araba kullanırken, çalışırken veya yürürken.</p>
-      </section>
-
-      <section>
-        <h2>🧑‍🏫 Neden Geliştirdim?</h2>
-        <p>Bir eğitimci, dijital pazarlamacı, veritabanı yöneticisi ve şair olarak, özellikle Türkçe'de kendiliğinden oluşan fikirleri yakalayabileceğim bir araca ihtiyacım vardı.</p>
-      </section>
-
-      <section>
-        <h2>🧠 Problem</h2>
-        <ul>
-          <li>Kısa, hantal kayıtlar</li>
-          <li>Sadece İngilizce desteği</li>
-          <li>Akıllı komut işleme yok</li>
-          <li>Akıllı düzenleme yok</li>
-        </ul>
-      </section>
-
-      <section>
-        <h2>🤖 Çözüm</h2>
-        <ul>
-          <li>Tek dokunuşla başlatma</li>
-          <li>3 dakika kesintisiz kayıt</li>
-          <li>Ses komutları: "Dur", "Yeni not", "Düzenle", "Gönder"</li>
-          <li>GPT destekli düzenleme</li>
-          <li>Çift dil desteği (TR + EN)</li>
-        </ul>
-      </section>
-
-      <section>
-        <h2>💸 İş Modeli</h2>
-        <ul>
-          <li>Ücretsiz: Günde 2 not</li>
-          <li>7 günlük deneme sürümü</li>
-          <li>$20 tek seferlik açma</li>
-          <li>$2/ay AI ekstraları için</li>
-        </ul>
-      </section>
-
-      <section>
-        <h2>📈 Yol Haritası & Vizyon</h2>
-        <ul>
-          <li>MVP Q3 2025'te hazır</li>
-          <li>Gelecek: web paneli, araba içi ses arayüzü, akıllı etiketler</li>
-        </ul>
-      </section>
-
-      <section>
-        <h2>👤 Kurucu</h2>
-        <p>Istikbal Turut – Eğitimci, şair, veritabanı yöneticisi, dijital düşünür. Türkçe ve küresel ses ekosistemlerinde önemli araçlar geliştiriyor.</p>
-      </section>
-
-      <footer class="contact">
-        <p><strong>İletişim</strong><br>
-        Istikbal Turut – Toronto<br>
-        <a href="mailto:istikbalturut@gmail.com">istikbalturut@gmail.com</a> |
-        <a href="https://www.linkedin.com/in/istikbalturut/">LinkedIn</a></p>
-      </footer>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-text">
+      <div class="badge">🎙️ Ses Öncelikli Not Alma</div>
+      <h1>Düşüncelerini<br><span class="highlight">Anında Kaydet</span></h1>
+      <p class="hero-sub">Türkçe ve İngilizce destekli, yapay zeka destekli ses not uygulaması. Konuş, kaydet, düzenle — hepsi tek dokunuşla.</p>
+      <div class="hero-actions">
+        <a href="login.html" class="btn-primary">Hemen Başla</a>
+        <a href="#nasil-calisir" class="btn-secondary">Nasıl Çalışır?</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat">
+          <span class="stat-num">3 dk</span>
+          <span class="stat-label">Kesintisiz Kayıt</span>
+        </div>
+        <div class="stat">
+          <span class="stat-num">2 dil</span>
+          <span class="stat-label">TR + EN</span>
+        </div>
+        <div class="stat">
+          <span class="stat-num">AI</span>
+          <span class="stat-label">Destekli Düzenleme</span>
+        </div>
+      </div>
     </div>
-
-    <div class="image-content">
-      <img src="images/kiz.png" alt="Hero Image" class="hero-image">
+    <div class="hero-image">
+      <img src="images/kiz.png" alt="iTurut Kullanımı">
     </div>
-  </main>
+  </section>
+
+  <!-- NASIL ÇALIŞIR -->
+  <section class="how-it-works" id="nasil-calisir">
+    <div class="section-inner">
+      <h2 class="section-title">Nasıl Çalışır?</h2>
+      <p class="section-sub">Üç adımda düşüncelerinizi kalıcı hale getirin</p>
+      <div class="steps">
+        <div class="step">
+          <div class="step-icon">🎙️</div>
+          <h3>Konuş</h3>
+          <p>Butona bas, Türkçe veya İngilizce konuş. Gerçek zamanlı transkripsiyon anında çalışır.</p>
+        </div>
+        <div class="step-arrow">→</div>
+        <div class="step">
+          <div class="step-icon">✨</div>
+          <h3>Düzenle</h3>
+          <p>Yapay zeka metni otomatik düzeltir, gramer hatalarını temizler ve notunu netleştirir.</p>
+        </div>
+        <div class="step-arrow">→</div>
+        <div class="step">
+          <div class="step-icon">💾</div>
+          <h3>Kaydet</h3>
+          <p>Notunu kaydet, kategorile, paylaş. Tüm cihazlarından erişim — web ve mobil.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ÖZELLİKLER -->
+  <section class="features">
+    <div class="section-inner">
+      <h2 class="section-title">Neden iTurut?</h2>
+      <p class="section-sub">Diğer not uygulamalarından farkı ne?</p>
+      <div class="feature-grid">
+        <div class="feature-card">
+          <div class="feature-icon">🇹🇷</div>
+          <h3>Türkçe Öncelikli</h3>
+          <p>Piyasadaki çoğu uygulama sadece İngilizce. iTurut Türkçe'yi birinci sınıf dil olarak destekler.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">⚡</div>
+          <h3>Tek Dokunuş</h3>
+          <p>Araba kullanırken, yürürken, toplantıdayken — bir dokunuşla kayıt başlar, düşüncen kaybolmaz.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🤖</div>
+          <h3>AI Düzenleme</h3>
+          <p>ChatGPT destekli düzenleme ile konuşma metninizi profesyonel bir nota dönüştürün.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">☁️</div>
+          <h3>Her Yerde Erişim</h3>
+          <p>iOS uygulama ve web arayüzü ile notlarınıza her cihazdan ulaşın, hiçbir şey kaybolmaz.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">📂</div>
+          <h3>Akıllı Organizasyon</h3>
+          <p>Kategoriler ve başlıklar ile yüzlerce notu kolayca yönetin, istediğinizi anında bulun.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🔒</div>
+          <h3>Güvenli & Özel</h3>
+          <p>Notlarınız Firebase ile güvenle saklanır. Sadece siz erişebilirsiniz.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- KİM İÇİN -->
+  <section class="for-who">
+    <div class="section-inner">
+      <h2 class="section-title">Kim Kullanıyor?</h2>
+      <div class="persona-grid">
+        <div class="persona">
+          <div class="persona-icon">🧑‍💼</div>
+          <h3>Yöneticiler</h3>
+          <p>Toplantı notları, aksiyon maddeleri, fikir listeleri — elleri doluyken bile.</p>
+        </div>
+        <div class="persona">
+          <div class="persona-icon">🎓</div>
+          <h3>Öğrenciler</h3>
+          <p>Ders notları, proje fikirleri, araştırma notları hızla sesle kayıt altına.</p>
+        </div>
+        <div class="persona">
+          <div class="persona-icon">✍️</div>
+          <h3>İçerik Üreticiler</h3>
+          <p>Blog fikirleri, video konuları, sosyal medya içerikleri — ilham geldiğinde yakala.</p>
+        </div>
+        <div class="persona">
+          <div class="persona-icon">🚗</div>
+          <h3>Sürücüler</h3>
+          <p>Yoldayken aklına gelen fikirler artık kaybolmuyor. Güvenli, elleri serbest kayıt.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta">
+    <div class="section-inner">
+      <h2>Hemen Deneyin</h2>
+      <p>Kayıt olmak ücretsiz. İlk notunuzu bugün alın.</p>
+      <a href="login.html" class="btn-primary btn-large">Ücretsiz Başla →</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <img src="images/logo.png" alt="iTurut" class="footer-logo">
+        <span>iTurut</span>
+      </div>
+      <div class="footer-links">
+        <a href="privacy-policy.html">Gizlilik Politikası</a>
+        <a href="account-deletion.html">Hesap Silme</a>
+        <a href="contact.html">İletişim</a>
+      </div>
+      <div class="footer-contact">
+        <a href="mailto:istikbalturut@gmail.com">istikbalturut@gmail.com</a>
+        <a href="https://www.linkedin.com/in/istikbalturut/" target="_blank">LinkedIn</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 iTurut. Tüm hakları saklıdır. Toronto, Kanada.</p>
+    </div>
+  </footer>
+
 </body>
 </html>
